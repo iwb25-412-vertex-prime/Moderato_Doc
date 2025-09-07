@@ -72,17 +72,29 @@
                         <span class="code-title">Quick Example</span>
                     </div>
                     <div class="code-content">
-                        <pre><code>// Moderate content with custom rules
+                        <pre><code><span class="comment">// Moderate Request</span>
 POST /moderate/
-{
-  "api_key": "ak_your_key_here",
-  "text_to_moderate": "Content to analyze"
+Headers: X-API-Key: your-strong-secret-key
+Body: {
+    "text_to_moderate": "This is some text to check"
 }
 
-// Response
+<span class="comment">// Response</span>
 {
-  "is_violation": false,
-  "reason": "Content approved"
+  "status": true,
+  "result": {
+    "flagged": false,
+    "confidence": 0.95,
+    "categories": [],
+    "severity": "none",
+    "action_recommended": "approve"
+  },
+  "metadata": {
+    "text_length": 42,
+    "processing_time_ms": 45,
+    "model_version": "v1.2.3",
+    "api_key_used": "My Moderation Key"
+  }
 }</code></pre>
                     </div>
                 </div>

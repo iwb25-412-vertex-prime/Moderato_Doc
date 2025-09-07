@@ -341,6 +341,18 @@ a:hover {
     overflow-x: auto;
 }
 
+/* Code syntax highlighting */
+.code-content pre code {
+    color: var(--text-primary);
+}
+
+/* Style comments in code blocks */
+.code-content pre code .comment,
+.code-content pre .comment {
+    color: #60a5fa;
+    font-style: italic;
+}
+
 /* Cards */
 .overview-grid {
     display: grid;
