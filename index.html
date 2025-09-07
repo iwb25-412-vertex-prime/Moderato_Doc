@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Policy Platform - Complete Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">🚀</span>
+                <span class="nav-title">Content Policy Platform</span>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#overview" class="nav-link">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#architecture" class="nav-link">Architecture</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#api-gateway" class="nav-link">API Gateway</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#python-api" class="nav-link">Python API</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#quick-start" class="nav-link">Quick Start</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#api-docs" class="nav-link">API Docs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Content Policy Platform</h1>
+                <p class="hero-subtitle">Complete Documentation & Developer Guide</p>
+                <p class="hero-description">
+                    A comprehensive platform combining API Gateway, User Portal, and AI-powered content moderation
+                    with vector database integration for custom content policies.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#quick-start" class="btn btn-primary">Get Started</a>
+                    <a href="#architecture" class="btn btn-secondary">View Architecture</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-preview">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">Quick Example</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code>// Moderate content with custom rules
+POST /moderate/
+{
+  "api_key": "ak_your_key_here",
+  "text_to_moderate": "Content to analyze"
+}
+
+// Response
+{
+  "is_violation": false,
+  "reason": "Content approved"
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="container">
+                <h2 class="section-title">📋 Project Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon">🌐</div>
+                        <h3>API Gateway & User Portal</h3>
+                        <p>Full-stack application built with Ballerina backend and Next.js frontend providing user authentication, API key management, and usage analytics.</p>
+                        <ul class="feature-list">
+                            <li>🔐 JWT Authentication System</li>
+                            <li>🔑 API Key Management (Max 3/user)</li>
+                            <li>📊 Usage Analytics & Quota Tracking</li>
+                            <li>💻 React-based Web Dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">🐍</div>
+                        <h3>Python RAG API</h3>
+                        <p>FastAPI-based content moderation service with AI-powered analysis using Google Gemini and ChromaDB vector database.</p>
+                        <ul class="feature-list">
+                            <li>🛡️ AI-Powered Content Moderation</li>
+                            <li>📚 Vector Database Integration</li>
+                            <li>🎯 Custom Rule Management</li>
+                            <li>🔒 Multi-User Environment Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Section -->
+        <section id="architecture" class="section">
+            <div class="container">
+                <h2 class="section-title">🏗️ System Architecture</h2>
+                <div class="architecture-container">
+                    <div class="architecture-image">
+                        <img src="images/pa.png" alt="System Architecture Diagram" class="arch-diagram">
+                    </div>
+                    <div class="architecture-details">
+                        <h3>High-Level Architecture</h3>
+                        <div class="arch-components">
+                            <div class="component">
+                                <h4>Frontend Layer</h4>
+                                <p>Next.js 15 with React 19, TypeScript, and Tailwind CSS for modern, responsive UI</p>
+                            </div>
+                            <div class="component">
+                                <h4>API Gateway Layer</h4>
+                                <p>Ballerina Swan Lake backend with SQLite database and JWT authentication</p>
+                            </div>
+                            <div class="component">
+                                <h4>AI Moderation Layer</h4>
+                                <p>FastAPI with ChromaDB vector database and Google Gemini AI integration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title">🛠️ Technology Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Backend</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Ballerina Swan Lake</span>
+                            <span class="tech-item">FastAPI</span>
+                            <span class="tech-item">SQLite</span>
+                            <span class="tech-item">ChromaDB</span>
+                            <span class="tech-item">Google Gemini AI</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Frontend</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Next.js 15</span>
+                            <span class="tech-item">React 19</span>
+                            <span class="tech-item">TypeScript</span>
+                            <span class="tech-item">Tailwind CSS 4</span>
+                            <span class="tech-item">Heroicons</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Security</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">JWT Tokens</span>
+                            <span class="tech-item">SHA256 Hashing</span>
+                            <span class="tech-item">API Key Auth</span>
+                            <span class="tech-item">CORS</span>
+                            <span class="tech-item">Environment Variables</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Gateway Section -->
+        <section id="api-gateway" class="section">
+            <div class="container">
+                <h2 class="section-title">🌐 API Gateway & User Portal</h2>
+                <div class="project-details">
+                    <div class="detail-card">
+                        <h3>🔐 Authentication System</h3>
+                        <ul>
+                            <li><strong>User Registration/Login:</strong> Email validation and secure password handling</li>
+                            <li><strong>JWT Token Management:</strong> 1-hour expiry with secure token tracking</li>
+                            <li><strong>Password Security:</strong> SHA256 hashing with salt protection</li>
+                            <li><strong>Token Revocation:</strong> Immediate invalidation on logout</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>🔑 API Key Management</h3>
+                        <ul>
+                            <li><strong>Secure Generation:</strong> 32-character hash with 'ak_' prefix</li>
+                            <li><strong>User Limits:</strong> Maximum 3 API keys per user account</li>
+                            <li><strong>Status Control:</strong> Active/inactive/revoked states</li>
+                            <li><strong>Usage Tracking:</strong> Lifetime and monthly statistics</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>📊 Quota System</h3>
+                        <ul>
+                            <li><strong>Monthly Limits:</strong> 100 requests per API key per month</li>
+                            <li><strong>Auto Reset:</strong> Automatic quota reset on first day of month</li>
+                            <li><strong>Real-time Monitoring:</strong> Live usage updates and warnings</li>
+                            <li><strong>Enforcement:</strong> HTTP 429 when quota exceeded</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Python API Section -->
+        <section id="python-api" class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title">🐍 Python RAG API</h2>
+                <div class="project-details">
+                    <div class="detail-card">
+                        <h3>🤖 AI-Powered Moderation</h3>
+                        <ul>
+                            <li><strong>Google Gemini Integration:</strong> Advanced language model for content analysis</li>
+                            <li><strong>Semantic Rule Matching:</strong> Vector similarity search for relevant rules</li>
+                            <li><strong>Multi-Rule Evaluation:</strong> Comprehensive analysis against multiple policies</li>
+                            <li><strong>Confidence Scoring:</strong> Detailed reasoning for moderation decisions</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>📚 Vector Database</h3>
+                        <ul>
+                            <li><strong>ChromaDB Integration:</strong> Efficient semantic search capabilities</li>
+                            <li><strong>Rule Storage:</strong> Persistent storage with metadata and context</li>
+                            <li><strong>Top-K Retrieval:</strong> Finds 5 most relevant rules per query</li>
+                            <li><strong>Auto Initialization:</strong> Automatic database setup and management</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h3>🎯 Custom Rules</h3>
+                        <ul>
+                            <li><strong>User-Specific Rules:</strong> Organized by API key and user ID</li>
+                            <li><strong>CRUD Operations:</strong> Complete rule lifecycle management</li>
+                            <li><strong>Flexible Format:</strong> Support for complex, multi-paragraph policies</li>
+                            <li><strong>Real-time Updates:</strong> No service restart required for rule changes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start Section -->
+        <section id="quick-start" class="section">
+            <div class="container">
+                <h2 class="section-title">🚀 Quick Start Guide</h2>
+                <div class="quickstart-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Prerequisites</h3>
+                            <div class="code-block">
+                                <pre><code># Required Software
+- Ballerina Swan Lake (2201.10.0+)
+- Node.js (18.0+)
+- Python (3.11+)
+- Java (11+) for Ballerina</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Start API Gateway</h3>
+                            <div class="code-block">
+                                <pre><code># Backend (Ballerina)
+cd apigateway-v1/ballerina-backend
+bal run
+
+# Frontend (Next.js)
+cd apigateway-v1/userportal
+npm install
+npm run dev</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Start Python RAG API</h3>
+                            <div class="code-block">
+                                <pre><code># Setup Environment
+cd python-rag-api
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+
+# Install & Configure
+pip install -r requirements.txt
+# Create .env with GEMINI_API_KEY
+
+# Start Service
+uvicorn app.main:app --reload</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Access Applications</h3>
+                            <div class="access-links">
+                                <a href="http://localhost:3000" class="access-link" target="_blank">
+                                    <span class="link-icon">🌐</span>
+                                    <span>User Portal</span>
+                                    <span class="link-url">localhost:3000</span>
+                                </a>
+                                <a href="http://localhost:8080/api/health" class="access-link" target="_blank">
+                                    <span class="link-icon">⚡</span>
+                                    <span>API Gateway</span>
+                                    <span class="link-url">localhost:8080</span>
+                                </a>
+                                <a href="http://127.0.0.1:8000/docs" class="access-link" target="_blank">
+                                    <span class="link-icon">🐍</span>
+                                    <span>Python API</span>
+                                    <span class="link-url">127.0.0.1:8000</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Documentation Section -->
+        <section id="api-docs" class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title">📚 API Documentation</h2>
+                <div class="api-sections">
+                    <div class="api-section">
+                        <h3>API Gateway Endpoints (Port 8080)</h3>
+                        <div class="endpoint-grid">
+                            <div class="endpoint-category">
+                                <h4>Authentication</h4>
+                                <div class="endpoint">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/api/auth/register</span>
+                                    <span class="desc">User registration</span>
+                                </div>
+                                <div class="endpoint">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/api/auth/login</span>
+                                    <span class="desc">User login</span>
+                                </div>
+                                <div class="endpoint">
+                                    <span class="method get">GET</span>
+                                    <span class="path">/api/auth/profile</span>
+                                    <span class="desc">User profile (protected)</span>
+                                </div>
+                            </div>
+                            <div class="endpoint-category">
+                                <h4>API Key Management</h4>
+                                <div class="endpoint">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/api/apikeys</span>
+                                    <span class="desc">Create API key</span>
+                                </div>
+                                <div class="endpoint">
+                                    <span class="method get">GET</span>
+                                    <span class="path">/api/apikeys</span>
+                                    <span class="desc">List user's keys</span>
+                                </div>
+                                <div class="endpoint">
+                                    <span class="method put">PUT</span>
+                                    <span class="path">/api/apikeys/{id}/status</span>
+                                    <span class="desc">Enable/disable key</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="api-section">
+                        <h3>Python RAG API Endpoints (Port 8000)</h3>
+                        <div class="endpoint-grid">
+                            <div class="endpoint-category">
+                                <h4>Rule Management</h4>
+                                <div class="endpoint">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/add-rule/</span>
+                                    <span class="desc">Add moderation rule</span>
+                                </div>
+                                <div class="endpoint">
+                                    <span class="method get">GET</span>
+                                    <span class="path">/rules/{user_id}/{api_key}/</span>
+                                    <span class="desc">Get user's rules</span>
+                                </div>
+                                <div class="endpoint">
+                                    <span class="method delete">DELETE</span>
+                                    <span class="path">/delete-rule/{rule_id}/</span>
+                                    <span class="desc">Delete specific rule</span>
+                                </div>
+                            </div>
+                            <div class="endpoint-category">
+                                <h4>Content Moderation</h4>
+                                <div class="endpoint">
+                                    <span class="method post">POST</span>
+                                    <span class="path">/moderate/</span>
+                                    <span class="desc">Moderate text content</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">🎯 Use Cases</h2>
+                <div class="usecase-grid">
+                    <div class="usecase-card">
+                        <div class="usecase-icon">📱</div>
+                        <h3>Social Media Platform</h3>
+                        <p>AI-powered content moderation for user-generated content with custom community guidelines and real-time analysis.</p>
+                        <div class="usecase-features">
+                            <span class="feature-tag">Real-time Moderation</span>
+                            <span class="feature-tag">Custom Rules</span>
+                            <span class="feature-tag">Multi-language</span>
+                        </div>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-icon">🏢</div>
+                        <h3>Enterprise SaaS</h3>
+                        <p>Multi-tenant content policy management with client isolation and environment-specific rule sets.</p>
+                        <div class="usecase-features">
+                            <span class="feature-tag">Client Isolation</span>
+                            <span class="feature-tag">Environment Separation</span>
+                            <span class="feature-tag">Compliance</span>
+                        </div>
+                    </div>
+                    <div class="usecase-card">
+                        <div class="usecase-icon">💻</div>
+                        <h3>Developer Platform</h3>
+                        <p>API key management with quota tracking and usage analytics for development teams.</p>
+                        <div class="usecase-features">
+                            <span class="feature-tag">Quota Management</span>
+                            <span class="feature-tag">Team Access</span>
+                            <span class="feature-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="#overview">Project Overview</a></li>
+                        <li><a href="#architecture">System Architecture</a></li>
+                        <li><a href="#quick-start">Quick Start Guide</a></li>
+                        <li><a href="#api-docs">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Applications</h4>
+                    <ul>
+                        <li><a href="http://localhost:3000" target="_blank">User Portal</a></li>
+                        <li><a href="http://localhost:8080/api/health" target="_blank">API Gateway</a></li>
+                        <li><a href="http://127.0.0.1:8000/docs" target="_blank">Python API Docs</a></li>
+                        <li><a href="http://127.0.0.1:8000/test_client.html" target="_blank">Test Interface</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://ballerina.io/downloads/" target="_blank">Ballerina Downloads</a></li>
+                        <li><a href="https://nodejs.org/" target="_blank">Node.js Downloads</a></li>
+                        <li><a href="https://python.org/" target="_blank">Python Downloads</a></li>
+                        <li><a href="https://nextjs.org/docs" target="_blank">Next.js Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Status</h4>
+                    <div class="status-indicators">
+                        <div class="status-item">
+                            <span class="status-dot green"></span>
+                            <span>Production Ready</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot blue"></span>
+                            <span>Actively Maintained</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-dot purple"></span>
+                            <span>Documentation Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Content Policy Platform. Documentation last updated: September 7, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18,15 12,9 6,15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
