@@ -164,6 +164,119 @@ Body: {
             </div>
         </section>
 
+        <!-- Video Demo Section -->
+        <section class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title">🎥 Video Demo</h2>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/if3RSk4qULw?si=29NPm8wBdlV6UBSC" 
+                            title="Content Policy Platform Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-description">
+                        <h3>Platform Walkthrough</h3>
+                        <p>Watch this comprehensive demo to see the Content Policy Platform in action, including user authentication, API key management, content moderation setup, and real-time testing of the AI-powered moderation system.</p>
+                        <div class="video-features">
+                            <span class="feature-tag">User Portal Demo</span>
+                            <span class="feature-tag">API Key Creation</span>
+                            <span class="feature-tag">Content Moderation</span>
+                            <span class="feature-tag">Real-time Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Structure Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">📁 Project Structure</h2>
+                <div class="structure-container">
+                    <div class="structure-overview">
+                        <h3>Complete Project Layout</h3>
+                        <p>The project consists of two main applications with comprehensive documentation and testing scripts.</p>
+                    </div>
+                    <div class="folder-structure">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="code-title">Project Directory Tree</span>
+                            </div>
+                            <div class="code-content">
+                                <pre><code>📂 Content Policy Platform/
+├── 📁 apigateway-v1/                    <span class="comment">// API Gateway & User Portal</span>
+│   ├── 📁 .github/workflows/
+│   │   └── 📄 ci.yml                   <span class="comment">// GitHub Actions CI/CD</span>
+│   ├── 📁 ballerina-backend/            <span class="comment">// Ballerina API Service</span>
+│   │   ├── 📁 database/
+│   │   │   ├── 📄 schema.sql
+│   │   │   └── 📄 sqlite-schema.sql
+│   │   ├── 📄 main.bal                 <span class="comment">// HTTP service & endpoints</span>
+│   │   ├── 📄 auth.bal                 <span class="comment">// JWT authentication</span>
+│   │   ├── 📄 database.bal             <span class="comment">// SQLite operations</span>
+│   │   ├── 📄 apikeys.bal              <span class="comment">// API key management</span>
+│   │   ├── 📄 quota.bal                <span class="comment">// Usage tracking</span>
+│   │   ├── 📄 types.bal                <span class="comment">// Data models</span>
+│   │   ├── 📄 utils.bal                <span class="comment">// Utilities</span>
+│   │   ├── 📄 api-endpoints.bal        <span class="comment">// Public API endpoints</span>
+│   │   ├── 📄 Ballerina.toml           <span class="comment">// Project configuration</span>
+│   │   └── 📄 README.md
+│   ├── 📁 userportal/                   <span class="comment">// Next.js Frontend</span>
+│   │   ├── 📁 app/                     <span class="comment">// Next.js app router</span>
+│   │   │   ├── 📁 api-testing/
+│   │   │   ├── 📁 apikeys/
+│   │   │   ├── 📁 auth/
+│   │   │   ├── 📁 docs/
+│   │   │   ├── 📁 settings/
+│   │   │   ├── 📄 layout.tsx
+│   │   │   └── 📄 page.tsx
+│   │   ├── 📁 components/               <span class="comment">// React components</span>
+│   │   │   ├── 📄 ApiKeyManagement.tsx
+│   │   │   ├── 📄 DashboardHome.tsx
+│   │   │   ├── 📄 LoginForm.tsx
+│   │   │   └── 📄 ... (15+ components)
+│   │   ├── 📁 hooks/                   <span class="comment">// Custom React hooks</span>
+│   │   ├── 📁 lib/                     <span class="comment">// Utility libraries</span>
+│   │   ├── 📄 package.json
+│   │   └── 📄 tsconfig.json
+│   ├── 📄 API_DOCUMENTATION.md          <span class="comment">// Complete API docs</span>
+│   ├── 📄 README.md                    <span class="comment">// Main documentation</span>
+│   └── 📄 *.bat, *.sh, *.ps1           <span class="comment">// Testing & setup scripts</span>
+├── 📁 python-rag-api/                  <span class="comment">// AI Content Moderation API</span>
+│   ├── 📁 app/
+│   │   ├── 📁 core/
+│   │   │   └── 📄 config.py            <span class="comment">// Environment configuration</span>
+│   │   ├── 📁 endpoints/
+│   │   │   └── 📄 moderation.py        <span class="comment">// API endpoints</span>
+│   │   ├── 📄 main.py                  <span class="comment">// FastAPI application</span>
+│   │   ├── 📄 services.py              <span class="comment">// Business logic</span>
+│   │   └── 📄 schemas.py               <span class="comment">// Pydantic models</span>
+│   ├── 📁 chroma_db/                   <span class="comment">// Vector database storage</span>
+│   ├── 📄 requirements.txt             <span class="comment">// Python dependencies</span>
+│   ├── 📄 test_client.html             <span class="comment">// HTML test interface</span>
+│   └── 📄 README.md
+├── 📁 docs/                            <span class="comment">// Documentation Website</span>
+│   ├── 📄 index.html                   <span class="comment">// Main documentation page</span>
+│   ├── 📄 styles.css                   <span class="comment">// Dark theme styling</span>
+│   └── 📄 script.js                    <span class="comment">// Interactive functionality</span>
+└── 📄 COMPLETE_PROJECT_DOCUMENTATION.md <span class="comment">// Comprehensive guide</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Technology Stack -->
         <section class="section bg-dark">
             <div class="container">
