@@ -112,7 +112,7 @@ Body: {
                     <div class="overview-card">
                         <div class="card-icon">🌐</div>
                         <h3>API Gateway & User Portal</h3>
-                        <p>Full-stack application built with Ballerina backend and Next.js frontend providing user authentication, API key management, and usage analytics.</p>
+                        <p>Full-stack application built with Node.js backend and Next.js frontend providing user authentication, API key management, and usage analytics.</p>
                         <ul class="feature-list">
                             <li>🔐 JWT Authentication System</li>
                             <li>🔑 API Key Management (Max 3/user)</li>
@@ -152,7 +152,7 @@ Body: {
                             </div>
                             <div class="component">
                                 <h4>API Gateway Layer</h4>
-                                <p>Ballerina Swan Lake backend with SQLite database and JWT authentication</p>
+                                <p>Node.js/Express backend with SQLite database and JWT authentication</p>
                             </div>
                             <div class="component">
                                 <h4>AI Moderation Layer</h4>
@@ -217,19 +217,20 @@ Body: {
 ├── 📁 apigateway-v1/                    <span class="comment">// API Gateway & User Portal</span>
 │   ├── 📁 .github/workflows/
 │   │   └── 📄 ci.yml                   <span class="comment">// GitHub Actions CI/CD</span>
-│   ├── 📁 ballerina-backend/            <span class="comment">// Ballerina API Service</span>
+│   ├── 📁 nodejs-backend/               <span class="comment">// Node.js API Service</span>
 │   │   ├── 📁 database/
 │   │   │   ├── 📄 schema.sql
 │   │   │   └── 📄 sqlite-schema.sql
-│   │   ├── 📄 main.bal                 <span class="comment">// HTTP service & endpoints</span>
-│   │   ├── 📄 auth.bal                 <span class="comment">// JWT authentication</span>
-│   │   ├── 📄 database.bal             <span class="comment">// SQLite operations</span>
-│   │   ├── 📄 apikeys.bal              <span class="comment">// API key management</span>
-│   │   ├── 📄 quota.bal                <span class="comment">// Usage tracking</span>
-│   │   ├── 📄 types.bal                <span class="comment">// Data models</span>
-│   │   ├── 📄 utils.bal                <span class="comment">// Utilities</span>
-│   │   ├── 📄 api-endpoints.bal        <span class="comment">// Public API endpoints</span>
-│   │   ├── 📄 Ballerina.toml           <span class="comment">// Project configuration</span>
+│   │   ├── 📁 src/
+│   │   │   ├── 📄 server.js            <span class="comment">// Express server & routes</span>
+│   │   │   ├── 📄 auth.js              <span class="comment">// JWT authentication</span>
+│   │   │   ├── 📄 database.js          <span class="comment">// SQLite operations</span>
+│   │   │   ├── 📄 apikeys.js           <span class="comment">// API key management</span>
+│   │   │   ├── 📄 quota.js             <span class="comment">// Usage tracking</span>
+│   │   │   ├── 📄 models.js            <span class="comment">// Data models</span>
+│   │   │   ├── 📄 utils.js             <span class="comment">// Utilities</span>
+│   │   │   └── 📄 endpoints.js         <span class="comment">// Public API endpoints</span>
+│   │   ├── 📄 package.json             <span class="comment">// Project configuration</span>
 │   │   └── 📄 README.md
 │   ├── 📁 userportal/                   <span class="comment">// Next.js Frontend</span>
 │   │   ├── 📁 app/                     <span class="comment">// Next.js app router</span>
@@ -285,7 +286,8 @@ Body: {
                     <div class="tech-category">
                         <h3>Backend</h3>
                         <div class="tech-items">
-                            <span class="tech-item">Ballerina Swan Lake</span>
+                            <span class="tech-item">Node.js</span>
+                            <span class="tech-item">Express.js</span>
                             <span class="tech-item">FastAPI</span>
                             <span class="tech-item">SQLite</span>
                             <span class="tech-item">ChromaDB</span>
@@ -399,10 +401,9 @@ Body: {
                             <h3>Prerequisites</h3>
                             <div class="code-block">
                                 <pre><code># Required Software
-- Ballerina Swan Lake (2201.10.0+)
 - Node.js (18.0+)
-- Python (3.11+)
-- Java (11+) for Ballerina</code></pre>
+- npm or yarn
+- Python (3.11+)</code></pre>
                             </div>
                         </div>
                     </div>
@@ -411,9 +412,10 @@ Body: {
                         <div class="step-content">
                             <h3>Start API Gateway</h3>
                             <div class="code-block">
-                                <pre><code># Backend (Ballerina)
-cd apigateway-v1/ballerina-backend
-bal run
+                                <pre><code># Backend (Node.js)
+cd apigateway-v1/nodejs-backend
+npm install
+npm start
 
 # Frontend (Next.js)
 cd apigateway-v1/userportal
@@ -614,8 +616,8 @@ uvicorn app.main:app --reload</code></pre>
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="https://ballerina.io/downloads/" target="_blank">Ballerina Downloads</a></li>
                         <li><a href="https://nodejs.org/" target="_blank">Node.js Downloads</a></li>
+                        <li><a href="https://expressjs.com/" target="_blank">Express.js Documentation</a></li>
                         <li><a href="https://python.org/" target="_blank">Python Downloads</a></li>
                         <li><a href="https://nextjs.org/docs" target="_blank">Next.js Documentation</a></li>
                     </ul>
